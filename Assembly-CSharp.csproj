@@ -36,34 +36,34 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\EnemyDamager.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
      <Compile Include="Assets\Scripts\ExpPickup.cs" />
+     <Compile Include="Assets\Scripts\CoinPickup.cs" />
+     <Compile Include="Assets\Scripts\DamageNumber.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Weapons\ProjectileWeapon.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\CoinController.cs" />
+     <Compile Include="Assets\Scripts\EnemyAnimation.cs" />
      <Compile Include="Assets\Scripts\DamageNumberController.cs" />
+     <Compile Include="Assets\Scripts\ExperienceLevelController.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponThrower.cs" />
      <Compile Include="Assets\Scripts\Weapons\CloseAttackWeapon.cs" />
      <Compile Include="Assets\Scripts\PlayerStatController.cs" />
-     <Compile Include="Assets\Scripts\Weapons\SpinWeapon.cs" />
-     <Compile Include="Assets\Scripts\LevelUpSelectionButton.cs" />
-     <Compile Include="Assets\Scripts\EnemyDamager.cs" />
-     <Compile Include="Assets\Scripts\CoinController.cs" />
-     <Compile Include="Assets\Scripts\ExperienceLevelController.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\EnemyAnimation.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-     <Compile Include="Assets\Scripts\Weapons\ThrownWeapon.cs" />
-     <Compile Include="Assets\Scripts\SFXManager.cs" />
-     <Compile Include="Assets\Scripts\Weapon.cs" />
-     <Compile Include="Assets\Scripts\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\UIController.cs" />
-     <Compile Include="Assets\Scripts\DamageNumber.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerStatUpgradeDisplay.cs" />
+     <Compile Include="Assets\Scripts\Weapons\ThrownWeapon.cs" />
+     <Compile Include="Assets\Scripts\Weapons\SpinWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\ZoneWeapon.cs" />
-     <Compile Include="Assets\Scripts\Weapons\WeaponThrower.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
-     <Compile Include="Assets\Scripts\CoinPickup.cs" />
-     <Compile Include="Assets\Scripts\Weapons\ProjectileWeapon.cs" />
-     <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\SFXManager.cs" />
+     <Compile Include="Assets\Scripts\LevelUpSelectionButton.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\_Udemy Vampire Survival Assets\Art\Dungeon Crawl Asset Licence\LICENSE.txt" />
@@ -718,12 +718,6 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:\Program Files\Unity 2022.1.24f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -733,17 +727,38 @@
     <Reference Include="Unity.2D.PixelPerfect">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    <Reference Include="Unity.2D.IK.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -754,17 +769,14 @@
     <Reference Include="Unity.Burst.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -772,17 +784,8 @@
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Mathematics">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
@@ -796,9 +799,6 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
@@ -808,11 +808,11 @@
     <Reference Include="Unity.2D.Common.Path.Editor">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+        <HintPath>E:\Git\VSC_Project\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
