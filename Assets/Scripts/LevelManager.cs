@@ -45,7 +45,7 @@ public class LevelManager : MonoBehaviour
         float minutes = Mathf.FloorToInt(timer / 60f);
         float seconds = Mathf.FloorToInt(timer % 60);
 
-        UIController.instance.endTimeText.text = minutes.ToString() + " mins " + seconds.ToString("00" + " secs");
+        UIController.instance.endTimeText.text = minutes.ToString() + " mins " + seconds.ToString("00") + " secs";
         UIController.instance.levelEndScreen.SetActive(true);
     }
 }
